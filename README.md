@@ -32,8 +32,9 @@ This is an in-house imputation pipeline for the genotype imputation of Singapore
 * VCFtools, BCFtools, bgzip and tabix should be on $PATH
 * Run with "./combine.sh"
 5. Final files in 04combined sorted into race and panel folders:
-*"$software"_"$race"_"$panel"_chrALL_preQC.vcf.gz - .vcf.gz file without post imputation QC
-*"$software"_"$race"_"$panel"_chrALL_postQC.vcf.gz - .vcf.gz file after post imputation QC 
-*combined_info.txt - INFO file for all chromosomes
-*maf_R2_preQC.txt - SNP list with chromosome, SNP ID, PLINK allele 1, PLINK allele 2, minor allele frequency and imputation quality score
-*maf_R2_postQC.txt - SNP list with chromosome, SNP ID, PLINK allele 1, PLINK allele 2, minor allele frequency and imputation quality score after post imputation QC
+* "$software"_"$race"_"$panel"_chrALL_preQC.vcf.gz - .vcf.gz file without post imputation QC
+* "$software"_"$race"_"$panel"_chrALL_postQC.vcf.gz - .vcf.gz file after post imputation QC 
+* combined_info.txt - INFO file for all chromosomes
+* maf_R2_preQC.txt - SNP list with chromosome, SNP ID, PLINK allele 1, PLINK allele 2, minor allele frequency and imputation quality score
+* maf_R2_postQC.txt - SNP list with chromosome, SNP ID, PLINK allele 1, PLINK allele 2, minor allele frequency and imputation quality score after post imputation QC
+* maf_R2_pre/postQC_maf1e-3.txt - same as maf_R2_pre/postQC.txt, but filtered by MAF < 0.005

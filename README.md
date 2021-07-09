@@ -17,23 +17,23 @@ This is an in-house imputation pipeline for the genotype imputation of Singapore
 
 ## How to run
 1. 01pre-phasing 
-	* Edit Parameters section in phase.sh
-	* PLINK should be on $PATH 
-	* Run with "./phase.sh".
+* Edit Parameters section in phase.sh
+* PLINK should be on $PATH 
+* Run with "./phase.sh".
 2. 02imputation 
-	* Edit Parameters section in impute.sh.
-	* Reference panels can be converted to m3vcf and PBWT formats using Minimac3 and PBWT respectively
-	* Run with "./impute.sh"
+* Edit Parameters section in impute.sh.
+* Reference panels can be converted to m3vcf and PBWT formats using Minimac3 and PBWT respectively
+* Run with "./impute.sh"
 3. 03postimpQC
-	* Edit Parameters section in postimp_qc.sh
-	* Run with "./postimp_qc.sh"
+* Edit Parameters section in postimp_qc.sh
+* Run with "./postimp_qc.sh"
 4. 04combined
-	* Edit Parameters section in combine.sh.
-	* VCFtools, BCFtools, bgzip and tabix should be on $PATH
-	* Run with "./combine.sh"
+* Edit Parameters section in combine.sh.
+* VCFtools, BCFtools, bgzip and tabix should be on $PATH
+* Run with "./combine.sh"
 5. Final files in 04combined sorted into race and panel folders:
-	*"$software"_"$race"_"$panel"_chrALL_preQC.vcf.gz - .vcf.gz file without post imputation QC
-	*"$software"_"$race"_"$panel"_chrALL_postQC.vcf.gz - .vcf.gz file after post imputation QC 
-	*combined_info.txt - INFO file for all chromosomes
-	*maf_R2_preQC.txt - SNP list with chromosome, SNP ID, PLINK allele 1, PLINK allele 2, minor allele frequency and imputation quality score
-	*maf_R2_postQC.txt - SNP list with chromosome, SNP ID, PLINK allele 1, PLINK allele 2, minor allele frequency and imputation quality score after post imputation QC
+*"$software"_"$race"_"$panel"_chrALL_preQC.vcf.gz - .vcf.gz file without post imputation QC
+*"$software"_"$race"_"$panel"_chrALL_postQC.vcf.gz - .vcf.gz file after post imputation QC 
+*combined_info.txt - INFO file for all chromosomes
+*maf_R2_preQC.txt - SNP list with chromosome, SNP ID, PLINK allele 1, PLINK allele 2, minor allele frequency and imputation quality score
+*maf_R2_postQC.txt - SNP list with chromosome, SNP ID, PLINK allele 1, PLINK allele 2, minor allele frequency and imputation quality score after post imputation QC

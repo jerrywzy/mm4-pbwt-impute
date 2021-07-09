@@ -1,9 +1,12 @@
 #!/bin/bash
 ### post imputation QC
 
-RESULTS=/hpc/home/lsiwzyj/Projects/InHouseImputation/03Imputation
-POSTIMPQC=/hpc/home/lsiwzyj/Projects/InHouseImputation/04postimpQC
-MERGED_REF=/hpc/home/lsiwzyj/MergedRefPanels
+################
+## PARAMETERS ##
+################
+working=/hpc/home/lsiwzyj/Projects/InHouseImputation   # directory with main folders (01pre-phasing, 02imputation etc)
+RESULTS=${working}/03Imputation
+POSTIMPQC=${working}/04postimpQC
 
 filterMAF="0.05"  # MAF filtering by 0.001 is done at plotting stage
 filterHWE="1e-6"
@@ -14,6 +17,9 @@ softwares=( minimac4 PBWT )
 panels=( 1000G HRC SG10K SG10K_1000G SG10K_HRC ) 
 CHRS=( 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 )  
 
+########
+## QC ##
+########
 for software in "${softwares[@]}"
 do
   cd ${POSTIMPQC}

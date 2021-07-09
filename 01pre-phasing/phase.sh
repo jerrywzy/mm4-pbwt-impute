@@ -1,11 +1,18 @@
 #!/bin/sh
 ### phase input files with Eagle2
 
-EAGLE=/hpc/home/lsiwzyj/programs/Eagle_v2.4.1
-TARGET=/hpc/home/lsiwzyj/iOmics_QC/Genomic-Feb2020/Genotyping/Omni2.5
-TABLES=$EAGLE/tables
-PHASING=/hpc/home/lsiwzyj/Projects/InHouseImputation/02pre-phasing
+################
+## PARAMETERS ##
+################
+working=/hpc/home/lsiwzyj/Projects/InHouseImputation/   # directory with main folders (01pre-phasing, 02imputation etc)
+EAGLE=/hpc/home/lsiwzyj/programs/Eagle_v2.4.1  # directory containing the Eagle executable
+TARGET=/hpc/home/lsiwzyj/iOmics_QC/Genomic-Feb2020/Genotyping/Omni2.5    # directory containing QC-ed VCF input files
+TABLES=$EAGLE/tables    # directory with genetic_map_hg19_withX.txt.gz, included in the Eagle tar file in /tables folder
+PHASING=${working}/02pre-phasing
 
+###########
+## Phase ##
+###########
 # Chinese
 cd ${PHASING}
 mkdir -p Chinese

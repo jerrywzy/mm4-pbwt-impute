@@ -1,16 +1,20 @@
 #!/bin/bash
 ### combine imputed files by chromosome, and create files filtered by MAF < 0.001
 
-VCFTOOLS=/hpc/home/lsiwzyj/perl5/lib64/perl5/vcftools-vcftools-cb8e254/src/perl
-BGZIP=/hpc/home/lsiwzyj/programs/bin
-
-POSTIMPQC=/hpc/home/lsiwzyj/Projects/InHouseImputation/04postimpQC
-COMBINED=/hpc/home/lsiwzyj/Projects/InHouseImputation/05combined
+################
+## PARAMETERS ##
+################
+working=/hpc/home/lsiwzyj/Projects/InHouseImputation/   # directory with main folders (01pre-phasing, 02imputation etc)
+POSTIMPQC=${working}/04postimpQC
+COMBINED=${working}/05combined
 
 races=( Chinese Malay Indian ) 
 softwares=( minimac4 PBWT ) 
 panels=( 1000G HRC SG10K SG10K_1000G SG10K_HRC )   
 
+#############
+## COMBINE ##
+#############
 for software in "${softwares[@]}"
 do
   cd ${COMBINED}

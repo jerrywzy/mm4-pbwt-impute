@@ -15,7 +15,7 @@ This is an in-house imputation pipeline for the genotype imputation of Singapore
 * BCFtools version: 1.9 (using htslib 1.9)
 * tabix version: 0.2.5
 
-## How to run
+## How to Run
 1. 01pre-phasing 
 * Edit Parameters section in phase.sh
 * PLINK should be on $PATH 
